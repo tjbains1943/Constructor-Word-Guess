@@ -1,8 +1,9 @@
 var Letter = require('./letter');
 var display = "";
 var display2 = "";
-
+// Constructor takes word and makes the letters of the word into objects.
 function Word() {
+    // function that makes each letter an object. 
     this.arry = [];
     this.objectLetters = function (word) {
         display = "";
@@ -13,6 +14,7 @@ function Word() {
         }
         console.log(display);
     } 
+    // interates through word and checks if letter was matched. If match, it displays letter.
     this.compareLetters = function(letter) {
         display2="";
         for (let x = 0; x < this.arry.length; x++) {

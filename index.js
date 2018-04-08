@@ -8,10 +8,11 @@ var display2 = words.display2;
 var Word = words.Word;
 var turn = 0;
 // console.log(gameWord);
-
+// creates inital game word
 var wordHolder = new Word();
     wordHolder.objectLetters(gameWord);
     guessesLeft = gameWord.length;
+// Recursive game function that prompts user for guesses each round.
 function recursiveGuess() {
     if( turn === 0) {
         console.log("Welcome To the Hangman, where you shall pay for your sins!\n")
@@ -32,8 +33,10 @@ function recursiveGuess() {
         }
     }
     ]).then(function(data){
+        // calls the function to check if any letters match with guess.
         var display3 = wordHolder.compareLetters(data.letter);
         console.log(display3);
+        // logic to decide outcomes. If win, give new word. 
         if (display3.indexOf("_") === -1) {
             console.log("Congatulations you won!");
             console.log("Next word.\n");
@@ -55,6 +58,7 @@ function recursiveGuess() {
             console.log("\nGame Over!");
             return;
         }
+        // start next letter guess. 
         turn++;
          recursiveGuess();
         

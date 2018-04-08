@@ -1,3 +1,4 @@
+// Makes letters into objects with properties for revealing letter or not. 
 function Letter(letter) {
     this.value = letter;
     this.guessed = false;
