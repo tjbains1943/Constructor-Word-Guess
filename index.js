@@ -1,4 +1,3 @@
-
 const randomWord = require('random-word');
 var words = require("./Word.js")
 const inquirer = require("inquirer");
@@ -7,15 +6,9 @@ var guessesLeft;
 var gameWord = randomWord();
 var display2 = words.display2;
 var Word = words.Word;
-var turn = 0
+var turn = 0;
 // console.log(gameWord);
-// guessesLeft = gameWord.length;
 
-
-
-// var el = new Word();
-// el.objectLetters(gameWord);
-// console.log(el.arry);
 var wordHolder = new Word();
     wordHolder.objectLetters(gameWord);
     guessesLeft = gameWord.length;
@@ -23,7 +16,6 @@ function recursiveGuess() {
     if( turn === 0) {
         console.log("Welcome To the Hangman, where you shall pay for your sins!\n")
     };
-    // console.log(guessesLeft + "\n");
     inquirer.prompt([
         {
             type: "input",

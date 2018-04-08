@@ -27,12 +27,6 @@ function Word() {
     }
 
 }
-
-// var el = new Word();
-// el.objectLetters("word");
-// el.compareLetters("o");
-// console.log(el.arry[1].letterGuessed());
-
 module.exports = {
     Word : Word,
     display2 : display2

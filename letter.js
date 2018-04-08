@@ -16,7 +16,4 @@ function Letter(letter) {
     }
 }
 
-// var el = new Letter("a");
-// el.letterGuessed("d");
-// el.compareLetters("o");
 module.exports = Letter;
